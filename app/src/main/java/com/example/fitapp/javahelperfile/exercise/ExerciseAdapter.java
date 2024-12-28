@@ -53,7 +53,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
         String picPath = exercise.getExercisePicPath();
         if (picPath != null && !picPath.isEmpty()) {
             Glide.with(context)
-                    .load(picPath)  // Use the URL directly from Firebase
+                    .load(picPath)  // Use the pictire path or URL directly from Firebase
                     .placeholder(R.drawable.jogging)  // Optional: Placeholder while loading
                     .error(R.drawable.jogging)  // Optional: Error image in case of failure
                     .into(holder.exerciseImage);
@@ -68,11 +68,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
             }
         }
 
-
-        // Set background color based on category using a separate method
         setBackgroundBasedOnCategory(holder.exerciseItemLayout);
 
-        // Add button click listener
         holder.addButton.setOnClickListener(v -> {
             if (user == null || user.getUserId() == null) {
                 Toast.makeText(context, "User not logged in. Please log in to add exercises.", Toast.LENGTH_SHORT).show();
