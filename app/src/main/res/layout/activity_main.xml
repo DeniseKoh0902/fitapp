@@ -9,74 +9,312 @@
     android:background="@color/white"
     tools:context=".ui.home.MainActivity">
 
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Select a Category"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
-
-    <LinearLayout
-        android:id="@+id/categoryButtons"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="446dp"
-        android:layout_below="@id/welcomeText"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-        <Button
-            android:id="@+id/btnAerobic"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Aerobic" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/btnFlexibility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Flexibility" />
+            <!-- Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-        <Button
-            android:id="@+id/btnBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Balance" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/category_button" />
 
-        <Button
-            android:id="@+id/btnHIIT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="HIIT" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnStrength"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Strength" />
+                    <TextView
+                        android:id="@+id/welcomeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Hello, username"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
 
-        <Button
-            android:id="@+id/btnTodayActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="Today Activity" />
-    </LinearLayout>
-=======
-        android:layout_centerInParent="true"
-        android:text="Home" />
->>>>>>> 172b022a49342446412c20a1f92646cf78a14948
+                    <TextView
+                        android:id="@+id/TVLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bronze"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/TVPoints"
+                        android:text="100pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Discover New Workouts Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Discover New Workouts"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Today Activity Section -->
+            <GridLayout
+                android:id="@+id/categoryGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="8dp"
+                android:numColumns="3"
+                android:padding="8dp"
+                android:rowCount="2"
+                android:scrollbars="none"
+                android:verticalSpacing="8dp">
+
+                <!-- Aerobic Category-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/IVAerobic"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/category_button"
+                        android:backgroundTint="@color/palepink"
+                        android:contentDescription="Aerobic categpry icon"
+                        android:src="@drawable/aerobic" />
+
+                    <TextView
+                        android:id="@+id/TVAerobic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Aerobic"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Flexibility Category-->
+
+                <!-- Balance Category-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/IVFlexibility"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/category_button"
+                        android:backgroundTint="@color/paleyellow"
+                        android:contentDescription="Flexibility categpry icon"
+                        android:src="@drawable/flexibility" />
+
+                    <TextView
+                        android:id="@+id/TVFlexibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Flexibility"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/IVBalance"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/category_button"
+                        android:backgroundTint="@color/palegreen"
+                        android:contentDescription="Balance categpry icon"
+                        android:src="@drawable/balance" />
+
+                    <TextView
+                        android:id="@+id/TVBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Balance"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Hitt Category-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/IVHitt"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/category_button"
+                        android:backgroundTint="@color/blue"
+                        android:contentDescription="Hitt categpry icon"
+                        android:src="@drawable/hitt" />
+
+                    <TextView
+                        android:id="@+id/TVHitt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Hitt"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Strength Category-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/IVStrength"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/category_button"
+                        android:backgroundTint="@color/palepurple"
+                        android:contentDescription="Strength categpry icon"
+                        android:src="@drawable/stregth" />
+
+                    <TextView
+                        android:id="@+id/TVStrength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Strength"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAerobic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"
+                    android:text="Aerobic" />
+
+                <Button
+                    android:id="@+id/btnBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="8dp"
+                    android:text="Balance" />
+
+                <Button
+                    android:id="@+id/btnHIIT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_margin="8dp"
+                    android:text="HIIT" />
+
+                <Button
+                    android:id="@+id/btnStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"
+                    android:text="Strength" />
+
+                <Button
+                    android:id="@+id/btnFlexibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="8dp"
+                    android:text="Flexibility" />
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Today Activity"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btnTodayActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Today Activity" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/todayRecyclerView"
+                android:layout_height="match_parent" >
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

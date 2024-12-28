@@ -56,14 +56,12 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation(files("libs/mail.jar"))
     implementation(files("libs/activation.jar"))
-<<<<<<< HEAD
+
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation ("com.squareup.picasso:picasso:2.8")
     implementation ("com.google.firebase:firebase-storage:20.0.1")
 
 
-=======
->>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
 }
