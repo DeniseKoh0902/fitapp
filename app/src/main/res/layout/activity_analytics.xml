@@ -48,6 +48,10 @@
             android:layout_marginTop="25dp"
             android:layout_marginEnd="0dp"
             android:text="Analytics"
+<<<<<<< HEAD
+            android:textColor="@color/black"
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
             android:fontFamily="@font/coiny_regular"
             android:textSize="35dp"
             />

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/RLExercise"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:layout_below="@+id/TVExerciseSubTitle"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/background_solidpink"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/TVExerciseName"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="@font/coiny_regular"
+        android:lineSpacingExtra="10dp"
+        android:text="Jogging"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/TVDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/TVExerciseName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toEndOf="@+id/ImageBg"
+        android:fontFamily="@font/cambay_regular"
+        android:text="30 minutes"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/ImageBg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/bottom_background" />
+
+    <ImageView
+        android:id="@+id/ImageExercise"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="12dp"
+        app:srcCompat="@drawable/jogging" />
+
+    <ImageButton
+        android:id="@+id/BtnEdit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/paleorange"
+        app:srcCompat="@drawable/icon_edit_black" />
+
+</RelativeLayout>

@@ -89,10 +89,20 @@ public class Login extends AppCompatActivity {
                             user.setUserType(snapshot.child("user_types").getValue(String.class));
                             user.setProfilePicPath(snapshot.child("profile_pic_path").getValue(String.class));
 
+<<<<<<< HEAD
+                            // Check if the user is an admin
+                            boolean isAdmin = "Jeflyn_1733202461846".equals(userId);
+
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
                             if (user != null) {
                                 // Pass User object to MainActivity
                                 Intent intent = new Intent(Login.this, MainActivity.class);
                                 intent.putExtra("user", user); // Parcelable User object
+<<<<<<< HEAD
+                                intent.putExtra("isAdmin", isAdmin); // Pass isAdmin flag
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
                                 startActivity(intent);
                                 finish(); // Close login activity
                                 loginSuccess = true;

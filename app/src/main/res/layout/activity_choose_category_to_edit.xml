@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.admin.ChooseCategoryToEdit">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChooseCategoryToEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/purple"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_menu" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_below="@+id/toolbarChooseCategoryToEdit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/RLFlexibility"
+            android:layout_width="375dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/RLAerobic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_orange">
+
+            <ImageView
+                android:id="@+id/IVFlexibility"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/flexibility" />
+
+            <Button
+                android:id="@+id/BtnFlexibility"
+                android:layout_width="240dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/IVFlexibility"
+                android:backgroundTint="@color/morepaleorange"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Flexibility"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLStrength"
+            android:layout_width="375dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/RLHIIT"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_solidpurple">
+
+            <ImageView
+                android:id="@+id/IVStrength"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/stregth" />
+
+            <Button
+                android:id="@+id/BtnStrength"
+                android:layout_width="240dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/IVStrength"
+                android:backgroundTint="@color/morepalepurple"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Strength"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLHIIT"
+            android:layout_width="375dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/RLBalance"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_solidblue">
+
+            <ImageView
+                android:id="@+id/IVHITT"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/hitt" />
+
+            <Button
+                android:id="@+id/BtnHIIT"
+                android:layout_width="240dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/IVHITT"
+                android:backgroundTint="@color/morepalegreen"
+                android:fontFamily="@font/cambay_bold"
+                android:text="HIIT"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLAerobic"
+            android:layout_width="375dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/TVEditExercise"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_solidpink">
+
+            <ImageView
+                android:id="@+id/IVAerobic"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/aerobic" />
+
+            <Button
+                android:id="@+id/BtnAerobic"
+                android:layout_width="240dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/IVAerobic"
+                android:backgroundTint="@color/paleorange"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Aerobic"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TVEditExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/coiny_regular"
+            android:gravity="center"
+            android:text="Edit Exercise"
+            android:textColor="@color/black"
+            android:textSize="35dp" />
+
+        <RelativeLayout
+            android:id="@+id/RLBalance"
+            android:layout_width="375dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/RLFlexibility"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_solidbluegreen">
+
+            <ImageView
+                android:id="@+id/IVBalance"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/balance" />
+
+            <Button
+                android:id="@+id/BtnBalance"
+                android:layout_width="240dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/IVBalance"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/cambay_bold"
+                android:text="Balance"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.analytics.Monthly">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRateUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:background="@color/green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/tvMonthly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRateUs"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/coiny_regular"
+        android:text="Monthly"
+        android:textColor="#F09715"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tvAnalytics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMonthly"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Analytics"
+        android:textColor="#120F0F"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAnalytics"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Calories Burned This Month"
+        android:textSize="20sp" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartView"
+        android:layout_width="349dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/tvAnalytics"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="284dp"></com.github.mikephil.charting.charts.PieChart>
+
+    <TextView
+        android:id="@+id/tvTotalCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="139dp"
+        android:layout_marginBottom="145dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Total Calories Amount: " />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="110dp"
+        android:text="2000 cal" />
+
+</RelativeLayout>

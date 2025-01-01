@@ -13,8 +13,70 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Select a Category"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/categoryButtons"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnAerobic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Aerobic" />
+
+        <Button
+            android:id="@+id/btnFlexibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Flexibility" />
+
+        <Button
+            android:id="@+id/btnBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Balance" />
+
+        <Button
+            android:id="@+id/btnHIIT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="HIIT" />
+
+        <Button
+            android:id="@+id/btnStrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Strength" />
+
+        <Button
+            android:id="@+id/btnTodayActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Today Activity" />
+    </LinearLayout>
+=======
         android:layout_centerInParent="true"
         android:text="Home" />
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

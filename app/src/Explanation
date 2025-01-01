@@ -1,0 +1,21 @@
+To build a more efficient, maintainable and user-friendly application, we implemented some View and View Groups to enhance user experiences. 
+
+
+Constraint Layout 
+
+ConstraintLayout is a versatile and flexible layout manager in Android that allows developers to create complex and responsive designs while maintaining high performance. In this case, we have included ConstraintLayout in the application to create a flexible, responsive, and 
+well-structured user interface while maintaining optimal performance.
+
+CardView
+
+A CardView is a UI component in Android that is used to display content in a card-like layout. It provides an easy way to display information with a consistent, material-design look and feel. In this case, we have utilized CardView to maintain a consistent and professional look for users to track their health and fitness data in the application. 
+
+RecyclerView 
+
+A RecyclerView refers to a flexible and efficient component in Android used to display large lists or grids of data by recycling views that are no longer visible. RecyclerView can provide fluid scrolling for lists to  enhance user satisfaction. We implemented  RecycleView in the application to  ensure the application runs smoothly and scales effortlessly as our content grows.
+
+CircularImageView 
+
+A CircularImageView  is a visual UI element where an image is displayed in a circular frame to represent profile pictures or icons. We have included  CircularImageView in our application to provide uniformity in displaying profile pictures among the users. This also reduces the visual noise often caused by rectangular or irregularly cropped images.
+
+

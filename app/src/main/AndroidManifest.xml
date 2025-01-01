@@ -17,7 +17,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitApp"
         tools:targetApi="31">
+<<<<<<< HEAD
+        <activity
+            android:name=".ui.exercise.TodayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.exercise.ExerciseListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.Weekly"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.Monthly"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ViewFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.EditExercise"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ChooseExerciseToEdit"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ChooseCategoryToEdit"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.UserList"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.AdminFeatures"
+            android:exported="false" />
+=======
 
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
         <activity
             android:name=".ui.analytics.ViewHealthReport"
             android:exported="false" />
@@ -50,6 +83,12 @@
             android:name=".ui.generalmodule.Login"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
+            android:name=".ui.admin.AdminProfile"
+            android:exported="false" />
+        <activity
+=======
+>>>>>>> 172b022a49342446412c20a1f92646cf78a14948
             android:name=".ui.generalmodule.WelcomingPage"
             android:exported="true">
             <intent-filter>
