@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fitapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.home.Timer"
+            android:exported="false" />
+        <activity
+            android:name=".ui.exercise.TodayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.exercise.ExerciseListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.Weekly"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.Monthly"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ViewFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.EditExercise"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ChooseExerciseToEdit"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.ChooseCategoryToEdit"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.UserList"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.AdminFeatures"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.ViewHealthReport"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ratingsystem.RateUs"
+            android:exported="false"
+            android:parentActivityName=".ui.profile.Profile" />
+        <activity
+            android:name=".ui.profile.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.HealthRecord"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.analytics.Analytics"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".ui.generalmodule.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.generalmodule.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".ui.generalmodule.Login"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.AdminProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ui.generalmodule.WelcomingPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

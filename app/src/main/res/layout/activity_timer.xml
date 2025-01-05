@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityTimer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.exercise.ExerciseListActivity">
+
+    <ProgressBar
+        android:id="@+id/PBTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="220dp"
+        android:layout_height="230dp"
+        android:layout_below="@+id/activityDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/circle_shape"
+        android:indeterminate="false"
+        android:max="1600"
+        android:progressDrawable="@drawable/circle_progress_bar"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/ButtonBack"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/baseline_arrow_back_grey" />
+
+    <TextView
+        android:id="@+id/activityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Jogging"
+        android:fontFamily="@font/coiny_regular"
+        android:textColor="@color/orange"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/activityImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/stregth" />
+
+    <TextView
+        android:id="@+id/activityDescription"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Great for building cardiovascular endurance and burns more calories!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/activityTiming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityDescription"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/coiny_regular"
+        android:gravity="center"
+        android:text="00:30:00"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PBTimer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="110dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/coiny_regular"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp" />
+
+</RelativeLayout>

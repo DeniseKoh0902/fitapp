@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.analytics.Weekly">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarWeeklyAnalytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:background="@color/green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/tvWeekly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarWeeklyAnalytics"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/coiny_regular"
+        android:text="Weekly"
+        android:textColor="#F09715"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/tvAnalytics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWeekly"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/coiny_regular"
+        android:text="Analytics"
+        android:textColor="#120F0F"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvCaloriesBurnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAnalytics"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Calories Burned This Week"
+        android:textSize="25dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartView"
+        android:layout_width="360dp"
+        android:layout_height="450dp"
+        android:layout_below="@+id/tvCaloriesBurnt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="284dp">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <TextView
+        android:id="@+id/tvTotalCaloriesBurnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/cambay_bold"
+        android:text="Total Calories Burnt: "
+        android:textSize="25dp" />
+
+</RelativeLayout>

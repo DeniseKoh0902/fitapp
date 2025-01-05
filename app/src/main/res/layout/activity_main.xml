@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/IVHomeProfile"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="1dp"
+                app:srcCompat="@drawable/profilepic" />
+
+            <TextView
+                android:id="@+id/TVLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcomeText"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-10dp"
+                android:layout_toEndOf="@+id/IVHomeProfile"
+                android:fontFamily="@font/coiny_regular"
+                android:text="Bronze"
+                android:textColor="@color/gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TVPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVLevel"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-20dp"
+                android:layout_toEndOf="@+id/IVHomeProfile"
+                android:fontFamily="@font/coiny_regular"
+                android:text="0pt"
+                android:textColor="@color/orange"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/IVHomeProfile"
+                android:text="Hello, username"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/coiny_regular"
+            android:text="Discover New Workouts"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:id="@+id/categoryGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="8dp"
+            android:rowCount="2"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/aerobicLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/IVAerobic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/category_button"
+                    android:backgroundTint="@color/paleorange"
+                    android:contentDescription="Aerobic categpry icon"
+                    android:src="@drawable/aerobic" />
+
+                <TextView
+                    android:id="@+id/TVAerobic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Aerobic"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/flexibilityLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/IVFlexibility"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/category_button"
+                    android:backgroundTint="@color/morepaleyellow"
+                    android:contentDescription="Flexibility categpry icon"
+                    android:src="@drawable/flexibility" />
+
+                <TextView
+                    android:id="@+id/TVFlexibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Flexibility"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/balanceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/IVBalance"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/category_button"
+                    android:backgroundTint="@color/bluegreen"
+                    android:contentDescription="Balance categpry icon"
+                    android:src="@drawable/balance" />
+
+                <TextView
+                    android:id="@+id/TVBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Balance"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hittLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/IVHitt"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/category_button"
+                    android:backgroundTint="@color/morepalegreen"
+                    android:contentDescription="Hitt categpry icon"
+                    android:src="@drawable/hitt" />
+
+                <TextView
+                    android:id="@+id/TVHitt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Hitt"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/strengthLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/IVStrength"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/category_button"
+                    android:backgroundTint="@color/palepurple"
+                    android:contentDescription="Strength categpry icon"
+                    android:src="@drawable/stregth" />
+
+                <TextView
+                    android:id="@+id/TVStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Strength"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </GridLayout>
+
+
+        <TextView
+            android:id="@+id/TVHomeTodayExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryGridView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/coiny_regular"
+            android:text="Today Activity"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todayRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_below="@+id/TVHomeTodayExercise"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:padding="0dp"
+            tools:listitem="@layout/exercise_item" />
+
+        <Button
+            android:id="@+id/btnTodayActivity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/categoryGridView"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/TVHomeTodayExercise"
+            android:background="@drawable/baseline_arrow_forward_24" />
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:background="@color/green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp" />
+
+</RelativeLayout>

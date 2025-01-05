@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profilebackground"
+    tools:context=".ui.profile.Profile">
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/profilepic"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:background="@color/green"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:fontFamily="@font/cambay_regular"
+        android:hint="Username"
+        android:inputType="text"
+        android:text="            Username"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/usertype"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:fontFamily="@font/cambay_regular"
+        android:inputType="text"
+        android:text="            Bronze"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/usertype"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="@font/cambay_regular"
+        android:text="            Prefer Not to Say"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/emailadd"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/dob"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="@font/cambay_regular"
+        android:text="            john@gmail.com"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/emailadd"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="@font/cambay_regular"
+        android:text="            Prefer Not to Say"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/point"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="51dp"
+        android:ems="10"
+        android:inputType="text"
+        android:fontFamily="@font/cambay_regular"
+        android:text="            0 points"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/profileicon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/profilepic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="311dp"
+        app:srcCompat="@drawable/profile_icon" />
+
+    <ImageView
+        android:id="@+id/usertypeicon"
+        android:layout_width="29dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="310dp"
+        app:srcCompat="@drawable/usertypeicon" />
+
+    <ImageView
+        android:id="@+id/calendaricon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/usertype"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="311dp"
+        app:srcCompat="@drawable/calander_icon" />
+
+    <ImageView
+        android:id="@+id/mailicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/dob"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="307dp"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <ImageView
+        android:id="@+id/phoneicon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/emailadd"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="311dp"
+        app:srcCompat="@drawable/phone_icon" />
+
+    <ImageView
+        android:id="@+id/coinicon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="309dp"
+        app:srcCompat="@drawable/coin_icon" />
+
+    <Button
+        android:id="@+id/ratebutton"
+        android:layout_width="130dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/point"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="210dp"
+        android:fontFamily="@font/cambay_regular"
+        android:text="Rate Us"
+        android:textColor="#000000"
+        app:backgroundTint="#F9EBD7"/>
+
+    <Button
+        android:id="@+id/logoutbutton"
+        android:layout_width="130dp"
+        android:layout_height="62dp"
+        android:layout_below="@+id/point"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/cambay_regular"
+        android:text="Log Out"
+        android:textColor="#000000"
+        app:backgroundTint="#FBCECF" />
+
+    <TextView
+        android:id="@+id/upperusername"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="103dp"
+        android:fontFamily="@font/coiny_regular"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/editprofileicon"
+        android:layout_width="46dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
+        app:srcCompat="@drawable/edit_icon" />
+
+
+</RelativeLayout>

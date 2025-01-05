@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288603888039",
+    "project_id": "fitapp-22d3c",
+    "storage_bucket": "fitapp-22d3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288603888039:android:f2bbebb660ade274353e82",
+        "android_client_info": {
+          "package_name": "com.example.fitapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbrRWP5pko4hY_UzJLeWT_rrsNlp6uP6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

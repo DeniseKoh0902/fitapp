@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/round_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/bottom_analytics"
+        android:icon="@drawable/round_analytics_24"
+        android:title="Analytics"/>
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:icon="@drawable/round_person_24"
+        android:title="Profile"/>
+
+</menu>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/TVWeightandHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Weight and Height"
+            android:textSize="25dp"
+            android:fontFamily="@font/coiny_regular" />
+
+        <EditText
+            android:id="@+id/ETHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TVEnterHeight"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="height"
+            android:inputType="text"
+            android:textSize="20dp"
+            android:fontFamily="@font/cambay_bold"/>
+
+        <EditText
+            android:id="@+id/ETWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TVEnterWeight"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="weight"
+            android:inputType="text"
+            android:textSize="20dp"
+            android:fontFamily="@font/cambay_bold"/>
+
+        <Button
+            android:id="@+id/BtnRecordHeightAndWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@+id/ETWeight"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="Record"
+            android:backgroundTint="@color/purple"
+            android:textSize="20dp"
+            android:fontFamily="@font/cambay_bold"/>
+
+        <TextView
+            android:id="@+id/TVEnterHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TVWeightandHeight"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Enter your height in cm"
+            android:textSize="20dp"
+            android:fontFamily="@font/cambay_regular"/>
+
+        <TextView
+            android:id="@+id/TVEnterWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ETHeight"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Enter your weight in kg"
+            android:textSize="20dp"
+            android:fontFamily="@font/cambay_regular"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

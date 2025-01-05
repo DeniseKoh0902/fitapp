@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "302494869474",
+    "firebase_url": "https://let-s-fit-cf424-default-rtdb.firebaseio.com",
+    "project_id": "let-s-fit-cf424",
+    "storage_bucket": "let-s-fit-cf424.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302494869474:android:9019bd0fed21d3034dbbbb",
+        "android_client_info": {
+          "package_name": "com.example.fitapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFZ0f8kxhSUC_c3pkLNQwJT_Q3TQqDgQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
