@@ -1,6 +1,6 @@
 Welcome to our Let's Fit repository! We are from Two Many Group. This repository contains the source code of our project.
 
-Contributors
+Contributors\n
 -Denise Koh Wei Sin
 -Jeflyn Khoo Jia Xuan
 -Kristern Lim Yu Xi
@@ -9,6 +9,9 @@ Contributors
 
 Overview
 Let's Fit is a comprehensive fitness and health tracking mobile application designed to help users monitor their exercise routines, track health metrics, and achieve fitness goals. It also provides a robust admin module for managing users and exercise details.
+
+Link to canva to take a glance on our project:
+https://www.canva.com/design/DAGbJMQd0kE/4wuB-eKKPasH5hCMaZt2sA/edit
 
 Features
 General Module:
