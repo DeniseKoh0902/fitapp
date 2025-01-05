@@ -1,4 +1,3 @@
-Let's Fit - Fitness and Health Tracking App
 Welcome to our Let's Fit repository! We are from Two Many Group. This repository contains the source code of our project.
 
 Contributors
