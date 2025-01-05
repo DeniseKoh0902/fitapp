@@ -5,7 +5,7 @@ Contributors
 -Jeflyn Khoo Jia Xuan
 -Kristern Lim Yu Xi
 -Tan Wei Qi
--Tan Xhi Wei
+-Tan Zhi Wei
 
 Overview
 Let's Fit is a comprehensive fitness and health tracking mobile application designed to help users monitor their exercise routines, track health metrics, and achieve fitness goals. It also provides a robust admin module for managing users and exercise details.
