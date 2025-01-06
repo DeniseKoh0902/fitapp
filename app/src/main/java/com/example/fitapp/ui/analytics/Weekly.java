@@ -144,29 +144,33 @@ public class Weekly extends AppCompatActivity {
 
     private void fetchDataFromFirebase() {
         SimpleDateFormat labelDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        SimpleDateFormat dayOfWeekFormat = new SimpleDateFormat("EEE", Locale.getDefault());
         labelDateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Kuala_Lumpur"));
-        dayOfWeekFormat.setTimeZone(TimeZone.getTimeZone("Asia/Kuala_Lumpur"));
+        SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
+        isoDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Kuala_Lumpur"));
-        calendar.set(Calendar.YEAR, 2025);
-        calendar.set(Calendar.MONTH, Calendar.JANUARY);
-        calendar.set(Calendar.DAY_OF_MONTH, 1);
 
-        String[] daysOfWeek = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-        int startingDay = 3;
+        calendar.set(Calendar.DAY_OF_WEEK, calendar.getFirstDayOfWeek());
+        Date startOfWeek = calendar.getTime();
+        String startOfWeekStr = labelDateFormat.format(startOfWeek);
 
+        calendar.add(Calendar.DAY_OF_WEEK, 6);
+        Date endOfWeek = calendar.getTime();
+        String endOfWeekStr = labelDateFormat.format(endOfWeek);
+
+        labels.clear();
+        calorieData.clear();
+
+        calendar.setTime(startOfWeek);
         for (int i = 0; i < 7; i++) {
-            labels.add(daysOfWeek[(startingDay + i - 1) % 7]);
+            labels.add(new SimpleDateFormat("EEE", Locale.getDefault()).format(calendar.getTime()));
             calorieData.put(labelDateFormat.format(calendar.getTime()), 0f);
             calendar.add(Calendar.DATE, 1);
         }
+
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
-                isoDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-
                 for (DataSnapshot exerciseSnapshot : dataSnapshot.getChildren()) {
                     String exerciseDate = exerciseSnapshot.child("exercise_date").getValue(String.class);
                     Float caloriesBurned = exerciseSnapshot.child("calories_burned").getValue(Float.class);
@@ -174,14 +178,16 @@ public class Weekly extends AppCompatActivity {
                     if (exerciseDate != null && caloriesBurned != null && caloriesBurned > 0) {
                         try {
                             Date parsedDate = isoDateFormat.parse(exerciseDate);
-                            Calendar malaysiaCalendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Kuala_Lumpur"));
-                            malaysiaCalendar.setTime(parsedDate);
+                            if (parsedDate != null) {
+                                String dateKey = labelDateFormat.format(parsedDate);
 
-                            String dateKey = labelDateFormat.format(malaysiaCalendar.getTime());
-
-                            if (calorieData.containsKey(dateKey)) {
-                                float currentCalories = calorieData.get(dateKey);
-                                calorieData.put(dateKey, currentCalories + caloriesBurned);
+                                // Only include data within the current week
+                                if (dateKey.compareTo(startOfWeekStr) >= 0 && dateKey.compareTo(endOfWeekStr) <= 0) {
+                                    if (calorieData.containsKey(dateKey)) {
+                                        float currentCalories = calorieData.get(dateKey);
+                                        calorieData.put(dateKey, currentCalories + caloriesBurned);
+                                    }
+                                }
                             }
                         } catch (Exception e) {
                             Log.e("ERROR", "Date parsing error: " + e.getMessage());
@@ -198,13 +204,14 @@ public class Weekly extends AppCompatActivity {
         });
     }
 
+
     private void populateBarChart() {
         barEntries.clear();
         ArrayList<String> dynamicLabels = new ArrayList<>();
         float totalCalories = 0;
         int index = 0;
 
-        String[] weekDays = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+        String[] weekDays = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
         HashMap<String, Float> orderedData = new HashMap<>();
 
         for (String day : weekDays) {
